@@ -1,5 +1,5 @@
 # Assignment 4
-### SQL JOINS
+### SQL JOINS :
 ## Customers Table
 
 | customer_id | customer_name |
@@ -85,12 +85,13 @@ The table shows all possible combinations of product names and customer names be
 | Shriya        | 2        | 2024-10-02 |
 | Sanjana       | 3        | 2024-10-03 |
 
-# h) Total Products Ordered by Each Customer (Join with Aggregation)
+# h) Join with Aggregration
 
 | customer_name | total_products_ordered |
 |---------------|------------------------|
-| Shriya        | 2                      |
-| Sanjana       | 1                      |
+| Aarav	        | 5                      |
+| Isha	        | 3                      |
+| Aditya	    | 2                      |
 
 # i) Multiple Joins Query
 
@@ -117,7 +118,7 @@ The table shows all possible combinations of product names and customer names be
 | 102           | IT              |
 | 103           | Finance         |
 
-## Full Outer Join
+# d) Full Outer Join
 
 | Employee_name| department_name |
 |--------------|-----------------|
@@ -127,7 +128,7 @@ The table shows all possible combinations of product names and customer names be
 | Saanvi	   | NULL            |
 | NULL	       | Finance         |
 
-## Self Join
+## e) Self Join
 
 | Employee | Manager |
 |----------|---------|
@@ -136,15 +137,7 @@ The table shows all possible combinations of product names and customer names be
 | Aditya   | Aarav   |
 | Saanvi   | Isha    |
 
-## Join with Aggregration
-
-| customer_name | total_products_ordered |
-|---------------|------------------------|
-| Aarav	        | 5                      |
-| Isha	        | 3                      |
-| Aditya	    | 2                      |
-
-## FOREIGN KEYS:
+### FOREIGN KEYS:
 # a)Foreign Key Definition
 ## Authors Table:
 
@@ -172,7 +165,49 @@ The table shows all possible combinations of product names and customer names be
 
 Error: FOREIGN KEY constraint failed
 
+### CONSISTENCY CONSTRAINTS :
 
+# a) Unique Constraint
 
+Runtime error: UNIQUE constraint failed: users.email (19)
 
+# b) Check Constraint
 
+Runtime error: CHECK constraint failed: price>1000 (19)
+
+# c) Primary Key and Consistency
+
+Runtime error: UNIQUE constraint failed: courses.course_id, courses.department_id (19)
+
+# d) Foreign Key and Consistency
+
+## students table 
+
+| student_id | student_name |
+|------------|--------------|
+| 1          | Shriya       |
+| 2          | Sharath      |
+| 3          | Sanjana      |
+
+## Courses Table
+
+| course_id | course_name | department_id |
+|-----------|-------------|---------------|
+| 101       | ADSD        | 1             |
+| 102       | COMSTAT     | 2             |
+| 101       | SL          | 3             |
+
+ After deletion of table students this error occurs :-
+Parse error: no such table: student_course
+
+# e) Not Null Contraint
+
+Runtime error: NOT NULL constraint failed: user.username (19)
+
+# f) Adding a Check Constraint to an Existing Table
+
+Runtime error: CHECK constraint failed: salary > 0 (19)
+
+# g) Composite Key Constrait
+
+Runtime error: UNIQUE constraint failed: students_courses.student_id, students_courses.course_id (19)
