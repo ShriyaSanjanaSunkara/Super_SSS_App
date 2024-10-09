@@ -158,3 +158,8 @@ The table shows all possible combinations of product names and customer names be
 |-------------|---------------|
 | 1	          | Electronics   |
 | 2	          | Furniture     |
+
+
+
+
+
