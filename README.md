@@ -1,4 +1,5 @@
 # Assignment 4
+### SQL JOINS
 ## Customers Table
 
 | customer_id | customer_name |
@@ -37,7 +38,7 @@
 | 2          | 2           |
 | 3          | 1           |
 
-## Inner Join: Customers and Orders
+# a)Inner Join: Customers and Orders
 
 | customer_name | product_name |
 |---------------|--------------|
@@ -45,7 +46,7 @@
 | Sanjana       | Mouse        |
 | Shriya        | Mouse        |
 
-## LEFT JOIN: Customers and Orders
+# b) LEFT JOIN: Customers and Orders
 
 | customer_name | product_name |
 |---------------|--------------|
@@ -54,7 +55,7 @@
 | Shriya        | Mouse        |
 | John          | NULL         |
 
-## RIGHT JOIN (Emulated with LEFT JOIN): Products and Suppliers
+# c) RIGHT JOIN (Emulated with LEFT JOIN): Products and Suppliers
 
 | product_name | supplier_name    |
 |--------------|------------------|
@@ -63,7 +64,7 @@
 | Keyboard     | NULL             |
 | NULL         | Gadget Planet    |
 
-# Cross Join Query: Products and Customers
+# f) Cross Join : Products and Customers
 
 The table shows all possible combinations of product names and customer names between the `products` and `customers` tables.
 
@@ -76,7 +77,7 @@ The table shows all possible combinations of product names and customer names be
 | Keyboard     | Shriya        |
 | Keyboard     | Sanjana       |
 
-## NATURAL JOIN of Customers and Orders
+# g) NATURAL JOIN of Customers and Orders
 
 | customer_name | order_id | order_date |
 |---------------|----------|------------|
@@ -84,7 +85,14 @@ The table shows all possible combinations of product names and customer names be
 | Shriya        | 2        | 2024-10-02 |
 | Sanjana       | 3        | 2024-10-03 |
 
-## Multiple Joins Query
+# h) Total Products Ordered by Each Customer (Join with Aggregation)
+
+| customer_name | total_products_ordered |
+|---------------|------------------------|
+| Shriya        | 2                      |
+| Sanjana       | 1                      |
+
+# i) Multiple Joins Query
 
 | customer_name | order_id | product_name | order_date |
 |---------------|----------|--------------|------------|
@@ -161,6 +169,8 @@ The table shows all possible combinations of product names and customer names be
 | 2	          | Furniture     |
 
 # c) Violating Forign Key Constraints
+
+Error: FOREIGN KEY constraint failed
 
 
 
