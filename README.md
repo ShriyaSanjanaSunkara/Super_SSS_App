@@ -137,6 +137,7 @@ The table shows all possible combinations of product names and customer names be
 | Aditya	    | 2                      |
 
 ## FOREIGN KEYS:
+# a)Foreign Key Definition
 ## Authors Table:
 
 | author_id | author_name |
@@ -151,13 +152,15 @@ The table shows all possible combinations of product names and customer names be
 | 1	      | Learn SQL           | 1         |
 | 2	      | Mastering Databases | 2         |
 
-## CASCADING DELETES :
+# b)Cascading deletes
 ## Category Table:
 
 | category_id |	category_name |
 |-------------|---------------|
 | 1	          | Electronics   |
 | 2	          | Furniture     |
+
+# c) Violating Forign Key Constraints
 
 
 
